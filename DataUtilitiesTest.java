@@ -21,6 +21,16 @@ public class DataUtilitiesTest extends DataUtilities {
 		mockingContext = new Mockery();
 	}
 	
+	/*
+	 * the length of an array with no elements should be zero
+	 */
+	@Test
+	public void createNumberArrayZeroElements() {
+		double[] data = new double[0];
+		int result = DataUtilities.createNumberArray(data).length;
+		assertEquals(0, result, .000000001d);
+	}
+	
 	/* ---------------------------------------------------------------
 	 * method at test: calculateColumnTotal(Values2D data, int column)
 	 * ---------------------------------------------------------------

@@ -43,6 +43,13 @@ public class RangeTest {
 	}
     
     // Improving coverage
+	
+	@Test
+    //Central value of 0 and 1 should be 0.5
+    public void getCentralValueIncludesZero() {
+    	Range small = new Range(0,1);
+    	assertEquals(0.5, small.getCentralValue(), .000000001d);
+    }
     
     @Test (expected = IllegalArgumentException.class)
     // Ensure that the proper exception is thrown when calling the constructor with a greater lower bound
